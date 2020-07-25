@@ -1,0 +1,16 @@
+body {
+  align-content: center;
+  background-color: #dde4b4;
+}
+
+.Container {
+  align-content: center;
+}
+
+.Home {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 2%;
+  margin-top: 3%;
+  color: #157A6E;
+  background-color: #dde4b4;
+}

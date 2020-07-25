@@ -1,5 +1,21 @@
+
+
 .App {
   text-align: center;
+  font-weight: 100;
+  background-color: #dde4b4;
+  padding-top: 4%;
+  padding-bottom: 10.8%;
+}
+
+.Banner {
+  background-color: #157A6E;
+  padding: 0;
+}
+
+.Book {
+  font-weight: 400;
+  padding-bottom: 5%;
 }
 
 .App-logo {
@@ -27,6 +43,7 @@
 .App-link {
   color: #61dafb;
 }
+
 
 @keyframes App-logo-spin {
   from {
