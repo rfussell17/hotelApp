@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import "./ContactForm.css";
-import { DropdownButton } from "react-bootstrap";
-import { Dropdown } from "react-bootstrap";
 
 class ContactForm extends Component {
   onSubmit = (e) => {
@@ -12,67 +10,74 @@ class ContactForm extends Component {
     return (
       <div className="ContactForm">
         <h3 className="Book">Book Your Stay Now</h3>
-        <form onSubmit={this.onSubmit} className="pb-5">
-          <div className="row">
-            <div className="col-sm">
-              <div className="form-group">
-                <label htmlFor="first-name">First Name</label>
-                <input id="first-name" type="text" className="form-control" />
-              </div>
-            </div>
-            <div className="col-sm">
-              <div className="form-group">
-                <label htmlFor="last-name">Last Name</label>
-                <input type="text" className="form-control" />
-              </div>
-            </div>
-          </div>
+      
+  <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">First Name</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="First Name"/>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Last Name</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Last Name"/>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email"/>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Address</label>
+      <input type="password" class="form-control" id="inputPassword4" placeholder="Address"/>
+    </div>
+  </div>
 
-          <div className="col-sm">
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input type="text" className="form-control" />
-            </div>
-            <div className="col-sm">
-              <div className="form-group">
-                <label htmlFor="phone-number">Phone Number</label>
-                <input type="text" className="form-control" />
-              </div>
-            </div>
-          </div>
 
-          <div className="col-sm">
-            <div className="form-group float-left">
-              <DropdownButton
-                id="dropdown-item-button"
-                title="Rooms"
-              >
-                <Dropdown.ItemText>Rooms</Dropdown.ItemText>
-                <Dropdown.Item as="button">1</Dropdown.Item>
-                <Dropdown.Item as="button">2</Dropdown.Item>
-                <Dropdown.Item as="button">3</Dropdown.Item>
-              </DropdownButton>
-            </div>
-          </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="inputState">Rooms</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>1</option>
+        <option>2</option>
+      </select>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">Guests</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">Nights</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck"/>
+      <label class="form-check-label" for="gridCheck">
+        I am over the age of 19
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Confirm</button>
+</form>
 
-          <div className="col-sm">
-            <div className="form-group float-right">
-              <DropdownButton
-                id="dropdown-item-button"
-                title="Guests"
-              >
-                <Dropdown.ItemText>Guests</Dropdown.ItemText>
-                <Dropdown.Item as="button">1</Dropdown.Item>
-                <Dropdown.Item as="button">2</Dropdown.Item>
-                <Dropdown.Item as="button">3</Dropdown.Item>
-              </DropdownButton>
-            </div>
-          </div>
-
-          <button className="btn btn-lg btn-primary" id="submit-button "type="submit">
-            Submit
-          </button>
-        </form>
       </div>
     );
   }
