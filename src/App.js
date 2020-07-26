@@ -1,22 +1,53 @@
-import React from 'react';
-import './App.css';
-import Home from './Home';
-import ContactForm from './ContactForm'
-import { Container } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { Component } from "react";
+import "./App.css";
+import Home from "./Home";
+import ContactForm from "./ContactForm";
+import { Container } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Confirmation from "./Confirmation";
 
-function App() {
-  return (
-    <div className="App">
-      <div className="Banner">
-        <br></br>
+class App extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      guests: [
+        {
+          firstName: "Ted",
+          lastName: "Logan",
+          email: "ted@email.com",
+          address: "123 Dilworth Drive",
+          rooms: 1,
+          adults: 2,
+          nights: 3
+        }
+      ],
+      form: {
+        firstName: "Ted",
+        lastName: "Logan",
+        email: "ted@email.com",
+        address: "123 Dilworth Drive",
+        rooms: 1,
+        guests: 2,
+        nights: 3
+      }
+    };
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div className="Banner">
+          <br></br>
+        </div>
+        <Container>
+          <Home />
+          <ContactForm />
+          <Confirmation />
+        </Container>
       </div>
-      <Container>
-      <Home />
-      <ContactForm />
-      </Container>
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

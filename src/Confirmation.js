@@ -1,14 +1,35 @@
-import React from 'react';
-import './Confirmation.css';
+import React, { Component } from "react";
 
-function Confirmation() {
-  return (
-    <div className="Home">
-      <h1>Success</h1>
-      <p>Your stay has been confirmed</p>
-      {/*print out name of guest, rooms, nights */}
-    </div>
-  );
+class Confirmation extends Component {
+  render(props) {
+
+    return (
+        <table className="table table-bordered">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Address</th>
+              <th>rooms</th>
+              <th>adults</th>
+              <th>nights</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+            console.log("this.props:", this.props)
+            }
+          </tbody>
+        </table>
+    );
+  }
 }
 
 export default Confirmation;
+
+/* <div className="Home">
+      <h1>Success</h1>
+      <p>Your stay has been confirmed</p>
+      {/*print out name of guest, rooms, nights 
+    </div> */
