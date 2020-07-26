@@ -3,6 +3,9 @@ import React, { Component } from "react";
 class Confirmation extends Component {
   render(props) {
 
+
+
+
     return (
         <table className="table table-bordered">
           <thead>
@@ -18,7 +21,8 @@ class Confirmation extends Component {
           </thead>
           <tbody>
             {
-            console.log("this.props:", this.props)
+            console.log("this.props:", this.props.guests),
+            console.log("this.props.guests: ", this.props.guests)
             }
           </tbody>
         </table>

@@ -7,7 +7,7 @@ class ContactForm extends Component {
   };
 
   render(props) {
-    console.log(this.props);
+    
 
     return (
       <div className="ContactForm">

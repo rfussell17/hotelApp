@@ -20,7 +20,7 @@ class App extends Component {
           rooms: 1,
           adults: 2,
           nights: 3
-        }
+        },
       ],
       form: {
         firstName: "Ted",
@@ -30,11 +30,13 @@ class App extends Component {
         rooms: 1,
         guests: 2,
         nights: 3
-      }
+      },
     };
   }
 
   render() {
+     console.log("current value of name <input>: ", this.state.form.firstName);
+     console.log("current value of guests: ", this.state.guests);
     return (
       <div className="App">
         <div className="Banner">
@@ -42,8 +44,8 @@ class App extends Component {
         </div>
         <Container>
           <Home />
-          <ContactForm />
-          <Confirmation />
+          <ContactForm form={this.state.form}/>
+          <Confirmation guests={this.state.guests}/>
         </Container>
       </div>
     );
