@@ -19,20 +19,33 @@ class App extends Component {
           address: "123 Dilworth Drive",
           rooms: 1,
           adults: 2,
-          nights: 3
+          nights: 3,
+          isOfAge: true
         },
       ],
       form: {
-        firstName: "Ted",
-        lastName: "Logan",
-        email: "ted@email.com",
-        address: "123 Dilworth Drive",
-        rooms: 1,
-        guests: 2,
-        nights: 3
+        firstName: "",
+        lastName: "",
+        email: "",
+        address: "",
+        rooms: "",
+        adults: "",
+        nights: "",
+        isOfAge: false
       },
     };
   }
+
+
+  updateInputs = (property, value) => {
+    const formCopy = Object.assign({}, this.state.form);
+
+    formCopy[property] = value;
+
+    this.setState({
+      form: formCopy, property
+    });
+  };
 
   render() {
      console.log("current value of name <input>: ", this.state.form.firstName);
@@ -44,7 +57,8 @@ class App extends Component {
         </div>
         <Container>
           <Home />
-          <ContactForm form={this.state.form}/>
+          <ContactForm form={this.state.form}
+          updateInputs={this.updateInputs}/>
           <Confirmation guests={this.state.guests}/>
         </Container>
       </div>

@@ -1,31 +1,30 @@
 import React, { Component } from "react";
 
 class Confirmation extends Component {
-  render(props) {
-
-
+  render() {
+    const outputVal = [];
+    for (let i = 0; i < this.props.guests.length; i++) {
+      const row = (
+          <p key={i}>
+          {this.props.guests[i].firstName + " " +
+          this.props.guests[i].lastName + " " +
+          this.props.guests[i].email + " " +
+          this.props.guests[i].email + " " +
+          this.props.guests[i].address + " " +
+          this.props.guests[i].rooms + " " +
+          this.props.guests[i].adults + " " +
+          this.props.guests[i].nights}
+          </p>
+      );
+      outputVal.push(row);
+    }
 
 
     return (
-        <table className="table table-bordered">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Phone</th>
-              <th>Email</th>
-              <th>Address</th>
-              <th>rooms</th>
-              <th>adults</th>
-              <th>nights</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-            console.log("this.props:", this.props.guests),
-            console.log("this.props.guests: ", this.props.guests)
-            }
-          </tbody>
-        </table>
+
+          <h4>
+{outputVal}
+          </h4>
     );
   }
 }
