@@ -24,27 +24,65 @@ class App extends Component {
         },
       ],
       form: {
-        firstName: "",
-        lastName: "",
-        email: "",
-        address: "",
-        rooms: "",
-        adults: "",
-        nights: "",
-        isOfAge: false
+        firstName: "Robin",
+        lastName: "Fussell",
+        email: "Robin@email.gmail.ca",
+        address: "1212 kane road",
+        rooms: "1",
+        adults: "1",
+        nights: "2",
+        isOfAge: true
       },
-    };
+    }
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateInputs = this.updateInputs.bind(this);
   }
+
 
 
   updateInputs = (property, value) => {
     const formCopy = Object.assign({}, this.state.form);
-
     formCopy[property] = value;
 
     this.setState({
       form: formCopy, property
     });
+  };
+
+  handleSubmit(){
+   let guestsCopy = [];
+    for(let i = 0; i < this.state.guests.length; i++){
+      const copy = Object.assign({}, this.state.guests[i]);
+      guestsCopy.push(copy);
+  }
+
+    let newGuest = {
+      firstName: this.state.form.firstName,
+      lastName: this.state.form.lastName,
+      phone: this.state.form.phone,
+      email: this.state.form.email,
+      address: this.state.form.address,
+      rooms: this.state.form.rooms,
+      adults: this.state.form.adults,
+      nights: this.state.form.nights,
+      isOfAge: this.state.form.isOfAge
+    }
+    guestsCopy.push(newGuest)
+
+    this.setState({
+      guests: guestsCopy,
+      form:
+      {
+      firstName: "",
+      lastName: "",
+      email: "",
+      address: "",
+      rooms: "",
+      adults: "",
+      nights: "",
+      isOfAge:""
+      }
+    })
   };
 
   render() {
@@ -57,8 +95,10 @@ class App extends Component {
         </div>
         <Container>
           <Home />
-          <ContactForm form={this.state.form}
-          updateInputs={this.updateInputs}/>
+          <ContactForm
+          form={this.state.form}
+          updateInputs={this.updateInputs}
+          handleSubmit={this.handleSubmit}/>
           <Confirmation guests={this.state.guests}/>
         </Container>
       </div>

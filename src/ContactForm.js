@@ -4,16 +4,17 @@ import "./ContactForm.css";
 class ContactForm extends Component {
   onSubmit = (e) => {
     e.preventDefault();
+    this.props.handleSubmit();
   };
 
-  render(props) {
+  render() {
     
 
     return (
       <div className="ContactForm">
         <h3 className="Book">Book Your Stay Now</h3>
 
-        <form>
+        <form onSubmit={this.onSubmit}>
           <div className="form-row">
             <div className="form-group col-md-6">
               <label htmlFor="firstName">First Name</label>
