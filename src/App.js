@@ -24,15 +24,15 @@ class App extends Component {
         },
       ],
       form: {
-        firstName: "Robin",
-        lastName: "Fussell",
-        email: "Robin@email.gmail.ca",
-        address: "1212 kane road",
-        rooms: "1",
-        adults: "1",
-        nights: "2",
-        isOfAge: true
+        firstName: "",
+        lastName: "",
+        email: "",
+        address: "",
+        rooms: "",
+        adults: "",
+        nights: "",
       },
+      isOfAge: ""
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateInputs = this.updateInputs.bind(this);
@@ -48,6 +48,7 @@ class App extends Component {
       form: formCopy, property
     });
   };
+
 
   handleSubmit(){
    let guestsCopy = [];
@@ -86,7 +87,7 @@ class App extends Component {
   };
 
   render() {
-     console.log("current value of name <input>: ", this.state.form.firstName);
+     console.log("current value of boolean <input>: ", this.state.form.isOfAge);
      console.log("current value of guests: ", this.state.guests);
     return (
       <div className="App">

@@ -23,7 +23,7 @@ class Confirmation extends Component {
     return (
 
           <h4>
-{outputVal}
+            {outputVal}
           </h4>
     );
   }
