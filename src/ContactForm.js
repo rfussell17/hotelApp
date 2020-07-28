@@ -108,13 +108,12 @@ class ContactForm extends Component {
           </div>
           <div className="form-group">
             <div className="form-check">
-              <input
+              <input 
+                type="checkbox"
                 name="isOfAge"
                 className="form-check-input"
-                type="checkbox"
                 id="isOfAge"
-                value={this.props.form.isOfAge}
-                onClick={(e) => {this.props.updateInputs(e.target.name, e.target.value)}}
+                checked={this.props.isOfAge}
               />
               <label className="form-check-label" htmlFor="isOfAge">
                 I am over the age of 19

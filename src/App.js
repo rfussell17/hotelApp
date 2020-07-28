@@ -20,7 +20,6 @@ class App extends Component {
           rooms: 1,
           adults: 2,
           nights: 3,
-          isOfAge: true
         },
       ],
       form: {
@@ -32,7 +31,7 @@ class App extends Component {
         adults: "",
         nights: "",
       },
-      isOfAge: ""
+      isOfAge: true
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateInputs = this.updateInputs.bind(this);
@@ -66,7 +65,6 @@ class App extends Component {
       rooms: this.state.form.rooms,
       adults: this.state.form.adults,
       nights: this.state.form.nights,
-      isOfAge: this.state.form.isOfAge
     }
     guestsCopy.push(newGuest)
 
@@ -80,9 +78,9 @@ class App extends Component {
       address: "",
       rooms: "",
       adults: "",
-      nights: "",
-      isOfAge:""
-      }
+      nights: ""
+      },
+      isOfAge: ""
     })
   };
 
@@ -99,7 +97,8 @@ class App extends Component {
           <ContactForm
           form={this.state.form}
           updateInputs={this.updateInputs}
-          handleSubmit={this.handleSubmit}/>
+          handleSubmit={this.handleSubmit}
+          isOfAge={this.state.isOfAge}/>
           <Confirmation guests={this.state.guests}/>
         </Container>
       </div>
