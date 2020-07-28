@@ -35,6 +35,7 @@ class App extends Component {
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateInputs = this.updateInputs.bind(this);
+   // this.handleCheckbox = this.handleCheckbox(this);
   }
 
 
@@ -42,6 +43,7 @@ class App extends Component {
   updateInputs = (property, value) => {
     const formCopy = Object.assign({}, this.state.form);
     formCopy[property] = value;
+    
 
     this.setState({
       form: formCopy, property
@@ -84,6 +86,10 @@ class App extends Component {
     })
   };
 
+ // handleCheckbox = (e) => {
+//  isOfAge[e.target.name] = e.target.type === "checkbox" ? e.target.checked : e.target.value;
+//}
+
   render() {
      console.log("current value of boolean <input>: ", this.state.form.isOfAge);
      console.log("current value of guests: ", this.state.guests);
@@ -98,6 +104,7 @@ class App extends Component {
           form={this.state.form}
           updateInputs={this.updateInputs}
           handleSubmit={this.handleSubmit}
+          handleCheckbox={this.handleCheckbox}
           isOfAge={this.state.isOfAge}/>
           <Confirmation guests={this.state.guests}/>
         </Container>
