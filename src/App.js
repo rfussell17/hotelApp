@@ -86,9 +86,11 @@ class App extends Component {
     })
   };
 
- // handleCheckbox = (e) => {
-//  isOfAge[e.target.name] = e.target.type === "checkbox" ? e.target.checked : e.target.value;
-//}
+  handleCheckbox = (e) => {
+    this.setState({
+      isOfAge: e.target.checked
+    });
+  }
 
   render() {
      console.log("current value of boolean <input>: ", this.state.form.isOfAge);

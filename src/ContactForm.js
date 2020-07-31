@@ -4,11 +4,11 @@ import "./ContactForm.css";
 class ContactForm extends Component {
   onSubmit = (e) => {
     e.preventDefault();
-   // if(this.props.form.isOfAge !== true)
-  //  alert("You must be 19 years or older to make a reservation")
-  //  else {
+     if(this.props.form.isOfAge !== true)
+      alert("You must be 19 years or older to make a reservation")
+      else {
       this.props.handleSubmit();
-  //  }
+    }
   };
 
   render() {
@@ -114,14 +114,7 @@ class ContactForm extends Component {
                 className="form-check-input"
                 id="isOfAge"
                 checked={this.props.isOfAge}
-                onChange={(e) => {
-             //     this.props.handleCheckbox({
-              //      target: {
-              //        name: e.target.name,
-              //        value: e.target.checked,
-             //       },
-             //     })
-                }}
+                onChange={this.props.handleCheckbox}
               />
 
               <label className="form-check-label" htmlFor="isOfAge">
