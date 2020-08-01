@@ -4,11 +4,7 @@ import "./ContactForm.css";
 class ContactForm extends Component {
   onSubmit = (e) => {
     e.preventDefault();
-     if(this.props.form.isOfAge !== true)
-      alert("You must be 19 years or older to make a reservation")
-      else {
-      this.props.handleSubmit();
-    }
+    this.props.handleSubmit();
   };
 
   render() {
