@@ -5,7 +5,7 @@ import ContactForm from "./ContactForm";
 import { Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Confirmation from "./Confirmation";
-
+import Modal from "./Component/Modal";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -31,32 +31,29 @@ class App extends Component {
         adults: "",
         nights: "",
       },
-      isOfAge: true
-    }
+      isOfAge: true,
+      show: false,
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateInputs = this.updateInputs.bind(this);
-   // this.handleCheckbox = this.handleCheckbox(this);
   }
-
-
 
   updateInputs = (property, value) => {
     const formCopy = Object.assign({}, this.state.form);
     formCopy[property] = value;
-    
 
     this.setState({
-      form: formCopy, property
+      form: formCopy,
+      property,
     });
   };
 
-
-  handleSubmit(){
-   let guestsCopy = [];
-    for(let i = 0; i < this.state.guests.length; i++){
+  handleSubmit() {
+    let guestsCopy = [];
+    for (let i = 0; i < this.state.guests.length; i++) {
       const copy = Object.assign({}, this.state.guests[i]);
       guestsCopy.push(copy);
-  }
+    }
 
     let newGuest = {
       firstName: this.state.form.firstName,
@@ -67,48 +64,65 @@ class App extends Component {
       rooms: this.state.form.rooms,
       adults: this.state.form.adults,
       nights: this.state.form.nights,
-    }
-    guestsCopy.push(newGuest)
+    };
+    guestsCopy.push(newGuest);
 
     this.setState({
       guests: guestsCopy,
-      form:
-      {
-      firstName: "",
-      lastName: "",
-      email: "",
-      address: "",
-      rooms: "",
-      adults: "",
-      nights: ""
+      form: {
+        firstName: "",
+        lastName: "",
+        email: "",
+        address: "",
+        rooms: "",
+        adults: "",
+        nights: "",
       },
-      isOfAge: ""
-    })
-  };
-
-  handleCheckbox = (e) => {
-    this.setState({
-      isOfAge: e.target.checked
+      isOfAge: "",
+      show: true,
     });
   }
 
+  handleCheckbox = (e) => {
+    this.setState({
+      isOfAge: e.target.checked,
+    });
+  };
+
+  showModal = (e) => {
+    this.setState({
+      show: !this.state.show,
+    });
+  };
+
   render() {
-     console.log("current value of boolean <input>: ", this.state.form.isOfAge);
-     console.log("current value of guests: ", this.state.guests);
     return (
       <div className="App">
         <div className="Banner">
           <br></br>
         </div>
+        <Modal show={this.state.show} />
         <Container>
           <Home />
           <ContactForm
-          form={this.state.form}
-          updateInputs={this.updateInputs}
-          handleSubmit={this.handleSubmit}
-          handleCheckbox={this.handleCheckbox}
-          isOfAge={this.state.isOfAge}/>
-          <Confirmation guests={this.state.guests}/>
+            form={this.state.form}
+            updateInputs={this.updateInputs}
+            handleSubmit={this.handleSubmit}
+            handleCheckbox={this.handleCheckbox}
+            isOfAge={this.state.isOfAge}
+          />
+          <Confirmation guests={this.state.guests} />
+          <h1>Hello CodeSandbox</h1>
+          <Modal onClose={this.showModal} show={this.state.show}>
+            Message in Modal
+          </Modal>
+          <button
+            class="toggle-button"
+            id="centered-toggle-button"
+            onClick={(e) => {
+              this.showModal(e);
+            }}
+          ></button>
         </Container>
       </div>
     );
