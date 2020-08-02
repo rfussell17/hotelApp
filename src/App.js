@@ -111,7 +111,10 @@ class App extends Component {
           <Confirmation guests={this.state.guests} />
 
           <Modal onClose={this.showModal} show={this.state.show}>
-            Message in Modal
+            <div className="modalBody">
+              <h2>Booking confirmed</h2>
+              <p>{this.props.outputVal}</p>
+            </div>
           </Modal>
 
           <button

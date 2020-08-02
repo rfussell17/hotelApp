@@ -13,13 +13,6 @@ export default class Modal extends React.Component {
        <div className="Container">
        <div>{this.props.children}</div>
         <div>
-          <button
-            onClose={(e) => {
-              this.onClose(e);
-            }}
-          >
-            Close
-          </button>
         </div>
        </div>
       </div>
