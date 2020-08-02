@@ -99,7 +99,6 @@ class App extends Component {
         <div className="Banner">
           <br></br>
         </div>
-        <Modal show={this.state.show} />
         <Container>
           <Home />
           <ContactForm
@@ -114,7 +113,7 @@ class App extends Component {
           <Modal onClose={this.showModal} show={this.state.show}>
             Message in Modal
           </Modal>
-          
+
           <button
             class="toggle-button"
             id="centered-toggle-button"

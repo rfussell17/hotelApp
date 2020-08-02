@@ -10,7 +10,8 @@ export default class Modal extends React.Component {
     }
     return (
       <div>
-        <div>{this.props.children}</div>
+       <div className="Container">
+       <div>{this.props.children}</div>
         <div>
           <button
             onClose={(e) => {
@@ -20,6 +21,7 @@ export default class Modal extends React.Component {
             Close
           </button>
         </div>
+       </div>
       </div>
     );
   }
