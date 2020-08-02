@@ -13,13 +13,13 @@ class App extends Component {
     this.state = {
       guests: [
         {
-          firstName: "Ted",
-          lastName: "Logan",
-          email: "ted@email.com",
-          address: "123 Dilworth Drive",
-          rooms: 1,
-          adults: 2,
-          nights: 3,
+          firstName: "",
+          lastName: "",
+          email: "",
+          address: "",
+          rooms: "",
+          adults: "",
+          nights: "",
         },
       ],
       form: {
