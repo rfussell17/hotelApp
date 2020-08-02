@@ -90,9 +90,7 @@ class App extends Component {
   };
 
   showModal = (e) => {
-    this.setState({
-      show: !this.state.show,
-    });
+    this.setState({ show: !this.state.show });
   };
 
   render() {
@@ -112,10 +110,11 @@ class App extends Component {
             isOfAge={this.state.isOfAge}
           />
           <Confirmation guests={this.state.guests} />
-          <h1>Hello CodeSandbox</h1>
+
           <Modal onClose={this.showModal} show={this.state.show}>
             Message in Modal
           </Modal>
+          
           <button
             class="toggle-button"
             id="centered-toggle-button"

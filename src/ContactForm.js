@@ -118,7 +118,7 @@ class ContactForm extends Component {
               </label>
             </div>
           </div>
-          <button type="submit" className="btn btn-primary" onSubmit={this.onSubmit} onClick={this.Confirmation} >
+          <button type="submit" className="btn btn-primary" onSubmit={this.onSubmit} onClick={this.Confirmation}>
             Confirm
           </button>
         </form>
