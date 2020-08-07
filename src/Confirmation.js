@@ -21,7 +21,6 @@ class Confirmation extends Component {
 
 
     return (
-
           <h4>
             {outputVal}
           </h4>

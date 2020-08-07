@@ -4,17 +4,20 @@ export default class Modal extends React.Component {
   onClose = e => {
     this.props.onClose && this.props.onClose(e);
   };
+
+  
   render() {
+
+    
     if (!this.props.show) {
       return null;
     }
     return (
-      <div>
-       <div className="Container">
-       <div>{this.props.children}</div>
-        <div>
+      <div id="myModal" className="modal">
+        <div className="modal-content">
+          <span className="close" onClick={console.log("clicked")}>&times;</span>
+          <p>Some text in the Modal..</p>
         </div>
-       </div>
       </div>
     );
   }

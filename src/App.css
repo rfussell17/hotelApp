@@ -5,8 +5,10 @@
   font-weight: 100;
   background-color: #dde4b4;
   padding-top: 4%;
-  padding-bottom: 10.8%;
-  overflow-y: hidden;
+  padding-bottom: 7%;
+  background-position: 100%;
+  overflow: auto;
+  margin: auto;
 }
 
 .Banner {
