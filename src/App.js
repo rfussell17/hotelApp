@@ -89,9 +89,9 @@ class App extends Component {
     });
   };
 
-  showModal = (e) => {
-    this.setState({ show: !this.state.show });
-  };
+  // showModal = (e) => {
+  //   this.setState({ show: !this.state.show });
+  // };
 
   render() {
     return (
@@ -115,13 +115,13 @@ class App extends Component {
  
 
 
-          <button
+          {/* <button
             className="toggle-button"
             id="centered-toggle-button"
             onClick={(e) => {
               this.showModal(e);
             }}
-          ></button>
+          ></button> */}
         </Container>
       </div>
     );

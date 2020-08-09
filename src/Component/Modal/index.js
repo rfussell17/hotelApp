@@ -5,6 +5,11 @@ export default class Modal extends React.Component {
     this.props.onClose && this.props.onClose(e);
   };
 
+  showModal = (e) => {
+    this.setState({ show: !this.state.show });
+  };
+
+
   
   render() {
 
@@ -17,6 +22,8 @@ export default class Modal extends React.Component {
         <div className="modal-content">
           <span className="close" onClick={console.log("clicked")}>&times;</span>
           <p>Some text in the Modal..</p>
+          {this.props.form}
+          {/* {this.props.guests} */}
         </div>
       </div>
     );
