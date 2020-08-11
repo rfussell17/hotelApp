@@ -89,9 +89,9 @@ class App extends Component {
     });
   };
 
-  // showModal = (e) => {
-  //   this.setState({ show: !this.state.show });
-  // };
+  showModal = (e) => {
+    this.setState({ show: !this.state.show });
+  };
 
   render() {
     return (

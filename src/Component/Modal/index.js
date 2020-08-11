@@ -5,12 +5,7 @@ export default class Modal extends React.Component {
     this.props.onClose && this.props.onClose(e);
   };
 
-  showModal = (e) => {
-    this.setState({ show: !this.state.show });
-  };
 
-
-  
   render() {
 
     
