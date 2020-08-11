@@ -36,6 +36,7 @@ class App extends Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.updateInputs = this.updateInputs.bind(this);
+    this.showModal = this.showModal.bind(this);
   }
 
   updateInputs = (property, value) => {
@@ -109,6 +110,7 @@ class App extends Component {
             handleSubmit={this.handleSubmit}
             handleCheckbox={this.handleCheckbox}
             isOfAge={this.state.isOfAge}
+            showModal={this.showModal}
           />
           <Confirmation guests={this.state.guests} />
 

@@ -118,7 +118,7 @@ class ContactForm extends Component {
               </label>
             </div>
           </div>
-          <button type="submit" className="btn btn-primary" onSubmit={this.onSubmit} onClick={(e) => {
+          <button type="submit" className="toggle-button" id="centered-toggle-button" onSubmit={this.onSubmit} onClick={(e) => {
               this.props.showModal(e);
             }}>
             Confirm
