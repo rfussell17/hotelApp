@@ -80,7 +80,7 @@ class App extends Component {
         nights: "",
       },
       isOfAge: "",
-      show: false,
+      show: true,
     });
   }
 
@@ -102,7 +102,7 @@ class App extends Component {
         </div>
         <Container>
           <Home />
-          <Modal onClose={this.showModal} show={this.state.show} form={this.state.form}>
+          <Modal onClose={this.showModal} show={this.state.show} form={this.state.form} guests={this.state.guests}>
           </Modal>
           <ContactForm
             form={this.state.form}
@@ -112,18 +112,7 @@ class App extends Component {
             isOfAge={this.state.isOfAge}
             showModal={this.showModal}
           />
-          <Confirmation guests={this.state.guests} />
-
- 
-
-
-          {/* <button
-            className="toggle-button"
-            id="centered-toggle-button"
-            onClick={(e) => {
-              this.showModal(e);
-            }}
-          ></button> */}
+          {/* <Confirmation guests={this.state.guests} /> */}
         </Container>
       </div>
     );

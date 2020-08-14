@@ -20,7 +20,7 @@ export default class Modal extends React.Component {
             Your reservation has been set {this.props.form.firstName}{" "}
             {this.props.form.lastName}!
           </p>
-          <p>Rooms: {this.props.form.rooms}</p>
+          <p>Rooms: {this.props.guests.rooms}</p>
           <p>Nights: {this.props.form.nights}</p>
           <p>Guests: {this.props.form.adults}</p>
           <p>A confirmation E-mail will be sent to {this.props.form.email}</p>
