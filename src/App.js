@@ -109,9 +109,10 @@ class App extends Component {
           <Modal 
            onClose={this.showModal}
            show={this.state.show}
-           form={this.state.form} 
+          // form={this.state.form} 
            guests={this.state.guests}>
-          </Modal>
+           </Modal>
+ 
           <ContactForm
             form={this.state.form}
             updateInputs={this.updateInputs}

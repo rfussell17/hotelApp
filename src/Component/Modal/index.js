@@ -14,7 +14,7 @@ export default class Modal extends React.Component {
 
     for (let i = 0; i < this.props.guests.length; i++) {
       const row = (
-        <div>
+        <div key={i}>
           <h1>Booking Confirmed</h1>
 
           <p>
