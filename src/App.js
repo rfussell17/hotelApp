@@ -4,7 +4,7 @@ import Home from "./Home";
 import ContactForm from "./ContactForm";
 import { Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Confirmation from "./Confirmation";
+//import Confirmation from "./Confirmation";
 import Modal from "./Component/Modal";
 class App extends Component {
   constructor(props) {
@@ -94,6 +94,10 @@ class App extends Component {
     this.setState({ show: !this.state.show });
   };
 
+  // showModal = (e) => {
+  //   this.setState({ show: false });
+  // };
+
   render() {
     return (
       <div className="App">
@@ -102,7 +106,11 @@ class App extends Component {
         </div>
         <Container>
           <Home />
-          <Modal onClose={this.showModal} show={this.state.show} form={this.state.form} guests={this.state.guests}>
+          <Modal 
+           onClose={this.showModal}
+           show={this.state.show}
+           form={this.state.form} 
+           guests={this.state.guests}>
           </Modal>
           <ContactForm
             form={this.state.form}
