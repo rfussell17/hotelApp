@@ -9,15 +9,37 @@ export default class Modal extends React.Component {
     if (!this.props.show) {
       return null;
     }
+
+    const outputVal = [];
+
+    for (let i = 0; i < this.props.guests.length; i++) {
+      const row = (
+        <div>
+          <h1>Booking Confirmed</h1>
+
+          <p>
+            Your reservation has been set {this.props.guests[i].firstName}{" "}
+            {this.props.guests[i].lastName}!
+          </p>
+          <p>Rooms: {this.props.guests[i].rooms}</p>
+          <p>Nights: {this.props.guests[i].nights}</p>
+          <p>Guests: {this.props.guests[i].adults}</p>
+          <p>
+            A confirmation E-mail will be sent to {this.props.guests[i].email}
+          </p>
+        </div>
+      );
+      outputVal.push(row);
+    }
+
     return (
       <div id="myModal" className="modal">
         <div className="modal-content">
-          <span className="close"
-            onClick={this.props.showModal}
-           >
+          <span className="close" onClick={this.props.showModal}>
             &times;
           </span>
-         <h1>Booking Confirmed</h1>
+          {outputVal}
+          {/* <h1>Booking Confirmed</h1>
           <p>
             Your reservation has been set {this.props.form.firstName}{" "}
             {this.props.form.lastName}!
@@ -25,8 +47,7 @@ export default class Modal extends React.Component {
           <p>Rooms: {this.props.form.rooms}</p>
           <p>Nights: {this.props.form.nights}</p>
           <p>Guests: {this.props.form.adults}</p>
-          <p>A confirmation E-mail will be sent to {this.props.form.email}</p>
-          
+          <p>A confirmation E-mail will be sent to {this.props.form.email}</p> */}
         </div>
       </div>
     );
