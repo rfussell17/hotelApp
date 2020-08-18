@@ -10,15 +10,15 @@
 
 <br>
 
-<img src="/images/hotel1-1.png"   title="hotel">
+<img src="/images/hotel2.png"   title="hotel">
 
 <br>
 
-<img src="/images/hotel1-1.png"   title="hotel">
+<img src="/images/hotel3.png"   title="hotel">
 
 <br>
 
-<img src="/images/hotel1-1.png"   title="hotel">
+<img src="/images/hotel4.png"   title="hotel">
 
 <br>
 
