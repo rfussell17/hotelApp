@@ -21,6 +21,7 @@ class ContactForm extends Component {
               <input
                 id="firstName"
                 name="firstName"
+                required
                 value={this.props.form.firstName}
                 type="text"
                 className="form-control"
@@ -32,6 +33,7 @@ class ContactForm extends Component {
               <label htmlFor="lastName">Last Name</label>
               <input
                 name="lastName"
+                required
                 type="text"
                 className="form-control"
                 id="lastName"
@@ -46,6 +48,7 @@ class ContactForm extends Component {
               <label htmlFor="email">Email</label>
               <input
                 name="email"
+                required
                 type="text"
                 className="form-control"
                 id="email"
@@ -58,6 +61,7 @@ class ContactForm extends Component {
               <label htmlFor="address">Address</label>
               <input
                 name="address"
+                required
                 type="text"
                 className="form-control"
                 id="address"
@@ -71,7 +75,7 @@ class ContactForm extends Component {
           <div className="form-row">
             <div className="form-group col-md-4">
               <label htmlFor="rooms">Rooms</label>
-              <select id="rooms" className="form-control" name="rooms" value={this.props.form.rooms} onChange={(e) => {this.props.updateInputs(e.target.name, e.target.value)}}>
+              <select id="rooms" className="form-control" name="rooms" required value={this.props.form.rooms} onChange={(e) => {this.props.updateInputs(e.target.name, e.target.value)}}>
                 
                 <option defaultValue>Choose...</option>
                 <option>1</option>
@@ -80,7 +84,7 @@ class ContactForm extends Component {
             </div>
             <div className="form-group col-md-4">
               <label htmlFor="adults">Adults</label>
-              <select id="adults" className="form-control" name="adults" value={this.props.form.adults} onChange={(e) => {this.props.updateInputs(e.target.name, e.target.value)}}>
+              <select id="adults" className="form-control" name="adults" required value={this.props.form.adults} onChange={(e) => {this.props.updateInputs(e.target.name, e.target.value)}}>
                 <option defaultValue>Choose...</option>
                 <option>1</option>
                 <option>2</option>
@@ -90,7 +94,7 @@ class ContactForm extends Component {
             </div>
             <div className="form-group col-md-4">
               <label htmlFor="nights">Nights</label>
-              <select id="nights" className="form-control" name="nights" value={this.props.form.nights} onChange={(e) => {this.props.updateInputs(e.target.name, e.target.value)}}>
+              <select id="nights" className="form-control" name="nights" required value={this.props.form.nights} onChange={(e) => {this.props.updateInputs(e.target.name, e.target.value)}}>
                 <option defaultValue>Choose...</option>
                 <option>1</option>
                 <option>2</option>

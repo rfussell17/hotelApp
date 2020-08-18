@@ -1,6 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
   align-content: center;
   background-color: #dde4b4;
+  color: #157A6E;
 }
 
 .Container {
@@ -8,9 +18,7 @@ body {
 }
 
 .Home {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  padding: 2%;
-  margin-top: 3%;
+
   color: #157A6E;
   background-color: #dde4b4;
 }

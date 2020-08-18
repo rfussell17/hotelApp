@@ -4,24 +4,13 @@ import Home from "./Home";
 import ContactForm from "./ContactForm";
 import { Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-//import Confirmation from "./Confirmation";
 import Modal from "./Component/Modal";
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      guests: [
-        {
-          firstName: "",
-          lastName: "",
-          email: "",
-          address: "",
-          rooms: "",
-          adults: "",
-          nights: "",
-        },
-      ],
+      guests: [],
       form: {
         firstName: "",
         lastName: "",
@@ -91,12 +80,10 @@ class App extends Component {
   };
 
   showModal = (e) => {
-    this.setState({ show: !this.state.show });
+      e.stopPropagation();
+      this.setState({ show: false });
+      console.log("clicked")
   };
-
-  // showModal = (e) => {
-  //   this.setState({ show: false });
-  // };
 
   render() {
     return (
@@ -107,9 +94,9 @@ class App extends Component {
         <Container>
           <Home />
           <Modal 
-           onClose={this.showModal}
+           showModal={this.showModal}
            show={this.state.show}
-          // form={this.state.form} 
+           form={this.state.form} 
            guests={this.state.guests}>
            </Modal>
  
