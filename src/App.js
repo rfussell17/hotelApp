@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import "./App.css";
 import Home from "./Home";
 import ContactForm from "./ContactForm";
 import { Container } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Modal from "./Component/Modal";
+import Modal from "./Modal";
+import "./App.css";
+import "./ContactForm.css";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -88,9 +90,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="Banner">
-          <br></br>
-        </div>
         <Container>
           <Home />
           <Modal 

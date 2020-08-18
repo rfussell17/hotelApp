@@ -12,7 +12,7 @@ class ContactForm extends Component {
 
     return (
       <div className="ContactForm">
-        <h3 className="Book">Book Your Stay Now</h3>
+        <h1 className="Book">Book Your Stay Now</h1>
 
         <form onSubmit={this.onSubmit}>
           <div className="form-row">
@@ -122,7 +122,7 @@ class ContactForm extends Component {
               </label>
             </div>
           </div>
-          <button type="submit" className="toggle-button" id="centered-toggle-button" >
+          <button type="submit" className="btn btn-primary" id="centered-toggle-button" >
             Confirm
           </button>
         </form>
