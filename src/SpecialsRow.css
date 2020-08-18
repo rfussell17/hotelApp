@@ -1,0 +1,11 @@
+.Specials-cards {
+  display: flex;
+  justify-content:space-evenly;
+  flex-wrap: wrap;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.SpecialsRow {
+  text-align: center;
+}

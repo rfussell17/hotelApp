@@ -12,7 +12,7 @@ class ContactForm extends Component {
 
     return (
       <div className="ContactForm">
-        <h1 className="Book">Book Your Stay Now</h1>
+        <h2 className="Book">Book Your Stay Now</h2>
 
         <form onSubmit={this.onSubmit}>
           <div className="form-row">

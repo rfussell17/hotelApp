@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Modal from "./Modal";
 import "./App.css";
 import "./ContactForm.css";
+import SpecialsRow from "./SpecialsRow";
 
 class App extends Component {
   constructor(props) {
@@ -83,7 +84,8 @@ class App extends Component {
 
   showModal = (e) => {
       e.stopPropagation();
-      this.setState({ show: false });
+      this.setState({ show: false,
+      guests: [] });
       console.log("clicked")
   };
 
@@ -92,6 +94,7 @@ class App extends Component {
       <div className="App">
         <Container>
           <Home />
+          <SpecialsRow />
           <Modal 
            showModal={this.showModal}
            show={this.state.show}
