@@ -4,6 +4,9 @@
 
  <img src="/images/react3.png">
 
+  Try it out here: [Hotel-Booking App](https://rfussell17.github.io/hotelApp/)
+ <br>
+
 
 
 <img src="/images/hotel1-1.png"   title="hotel">
@@ -21,6 +24,11 @@
 <img src="/images/hotel4.png"   title="hotel">
 
 <br>
+
+## Summary
+
+This is a Hotel booking app I built with Reactjs and Bootstrap. This was mainly an exercise to work with forms in React and modal popups. There is a landing page that provides initial details, and when you scroll down there is a form to fill out. The form takes the data that was input and uses it to render the confirmation in the modal.
+
 
 **Author**
 <br>
