@@ -4,9 +4,6 @@
 
  <img src="/images/react3.png">
 
-  Try it out here: [Hotel-Booking App](https://rfussell17.github.io/hotelApp/)
- <br>
-
 
 
 <img src="/images/hotel1-1.png"   title="hotel">
