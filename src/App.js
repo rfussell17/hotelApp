@@ -110,7 +110,6 @@ class App extends Component {
             isOfAge={this.state.isOfAge}
             showModal={this.showModal}
           />
-          {/* <Confirmation guests={this.state.guests} /> */}
         </Container>
       </div>
     );

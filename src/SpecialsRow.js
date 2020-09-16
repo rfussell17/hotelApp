@@ -22,7 +22,7 @@ class SpecialsRow extends Component {
         <strong>Summer sale on through August</strong>
         <br></br>
         <br></br>
-          <p>Up to 20% off on popular treatment packages</p>
+          <p>Up to 20% off our popular treatment packages</p>
           <p>Refer a friend to get a 25$ voucher for our lounge</p>
       </div>
     );
