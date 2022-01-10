@@ -22,6 +22,10 @@
 
 <br>
 
+## View Live: [Here](https://rfussellhotelapp.netlify.app/)
+
+<br>
+
 ## Summary
 
 This is a Hotel booking app I built with Reactjs and Bootstrap. This was mainly an exercise to work with forms in React and modal popups. There is a landing page that provides initial details, and when you scroll down there is a form to fill out. The form takes the value that was entered in the input box and uses it to render the confirmation modal.
